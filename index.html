@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz Game</h1>
+    <div id="question-box">
+      <p id="question"></p>
+      <div id="options"></div>
+      <input type="text" id="fill-answer" placeholder="Type your answer" style="display: none;">
+    </div>
+    <button id="next-btn">Next</button>
+    <div id="result"></div>
+  </div>
+
+  <div id="questions-data" style="display: none;">
+    <div class="question" data-type="single" data-question="What is the capital of India?" data-answer="Delhi">
+      <label><input type="radio" name="q1" value="Mumbai"> Mumbai</label>
+      <label><input type="radio" name="q1" value="Delhi"> Delhi</label>
+      <label><input type="radio" name="q1" value="Chennai"> Chennai</label>
+      <label><input type="radio" name="q1" value="Kolkata"> Kolkata</label>
+    </div>
+    <div class="question" data-type="multi" data-question="Select the primary colors:" data-answer="Red,Blue,Yellow">
+      <label><input type="checkbox" value="Red"> Red</label>
+      <label><input type="checkbox" value="Green"> Green</label>
+      <label><input type="checkbox" value="Blue"> Blue</label>
+      <label><input type="checkbox" value="Yellow"> Yellow</label>
+    </div>
+    <div class="question" data-type="fill" data-question="______ is the powerhouse of the cell." data-answer="mitochondria">
+      <input type="text" id="fill-answer" placeholder="Type your answer">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
